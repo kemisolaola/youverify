@@ -8,13 +8,14 @@
     <div
       class="col-span-1 flex justify-end lg:hidden bg-white items-center cursor-pointer"
     >
-      <img src="../assets/images/menu.png" class="w-6" alt="" @click="toggleMenu" />
+      <img src="../assets/images/menu.png" class="w-6" alt="" @click="toggleMobileMenu" />
     </div>
     <!-- Midle grid -->
     <div class="col-span-6  lg:col-span-8 font-Euclid text-deepGrey text-sm ">
       <div class="flex items-center">
         <div
-          class="rounded-full  flex items-center justify-center mr-2"
+          class="rounded-full cursor-pointer  flex items-center justify-center mr-2"
+          @click="closeSideNav"
         >
           <img src="../assets/images/left-arrow.svg"  alt="" class="w-11 h-11" />
         </div>
@@ -121,9 +122,12 @@ export default {
   },
   computed: {},
   methods: {
-    toggleMenu() {
+    toggleMobileMenu() {
       this.isOpen = !this.isOpen
     },
+    closeSideNav () {
+      this.$emit('close')
+    }
   },
 }
 </script>

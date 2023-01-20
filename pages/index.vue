@@ -1,9 +1,9 @@
 <template>
   <div class="relative">
-    <NavBar />
+    <NavBar @close="closeSideNav" />
     <div class="grid lg:grid-cols-5 h-full bg-lightgrey">
-      <SideBar class="col-span-1 hidden lg:block" />
-      <div class="grid mt-10 col-span-4 w-full">
+      <SideBar class="col-span-1 hidden lg:block" v-if="sideNav"/>
+      <div class="grid mt-10 col-span-4 w-full" :class="sideNav ? 'col-span-4' : 'col-span-5'">
         <div class="col-span-1 relative">
           <!--  .-->
           <div
@@ -74,6 +74,7 @@ export default {
   name: 'IndexPage',
   data() {
     return {
+      sideNav: true,
       openTask: false,
       agents: false,
       currentLocation: {},
@@ -113,7 +114,12 @@ export default {
     toggleAgent() {
       this.agents = !this.agents
     },
+    closeSideNav () {
+    console.log('first')
+    this.sideNav = !this.sideNav
+  }
   },
+  
 }
 </script>
 <style>
