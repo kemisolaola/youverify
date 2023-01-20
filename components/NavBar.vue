@@ -6,9 +6,9 @@
       <img src="../assets/images/logo.svg" alt="" class="pt-2 w-40" />
     </div>
     <div
-      class="col-span-1 flex justify-end lg:hidden items-center cursor-pointer"
+      class="col-span-1 flex justify-end lg:hidden items-center "
     >
-      <img src="../assets/images/menu.png" class="w-6" alt="" @click="toggleMobileMenu" />
+      <img src="../assets/images/menu.png" class="w-6 cursor-pointer" alt="" @click="toggleMobileMenu" />
     </div>
     <!-- Midle grid -->
     <div class="col-span-6  lg:col-span-8 font-Euclid text-deepGrey text-sm ">
