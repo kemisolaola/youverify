@@ -1,4 +1,4 @@
-# Youversion
+# Youverify
 
 ## Build Setup
 

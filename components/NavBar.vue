@@ -6,7 +6,7 @@
       <img src="../assets/images/logo.svg" alt="" class="pt-2 w-40" />
     </div>
     <div
-      class="col-span-1 flex justify-end lg:hidden bg-white items-center cursor-pointer"
+      class="col-span-1 flex justify-end lg:hidden items-center cursor-pointer"
     >
       <img src="../assets/images/menu.png" class="w-6" alt="" @click="toggleMobileMenu" />
     </div>
@@ -14,7 +14,7 @@
     <div class="col-span-6  lg:col-span-8 font-Euclid text-deepGrey text-sm ">
       <div class="flex items-center">
         <div
-          class="rounded-full cursor-pointer  flex items-center justify-center mr-2"
+          class="rounded-full cursor-pointer  lg:flex items-center justify-center mr-2 hidden"
           @click="closeSideNav"
         >
           <img src="../assets/images/left-arrow.svg"  alt="" class="w-11 h-11" />
@@ -44,7 +44,7 @@
       </div>
     </div>
     <!-- end middle grid -->
-    <div class="col-span-2 ml-2">
+    <div class="col-span-2 ml-2 hidden lg:block">
       <div class="flex items-center justify-end lg:justify-between">
         <button
           type="button"
